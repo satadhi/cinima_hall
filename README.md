@@ -1,2 +1,2 @@
-# cinima_hall
-project 
+# Cinema_hall
+cinema hall 
