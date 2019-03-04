@@ -31,8 +31,8 @@ urlpatterns = [
     url(r'^login/$', login_page),
     url(r'^register/$', register_page),
     #url(r'^product/$', ProductListView.as_view()),#its a class so you have to make it a callable item
-    url(r'^product-fbv/$', product_list_view),
-    url(r'^product-fbv/(?P<pk>\d+)/$', product_detail_view),
+    url(r'^product/$', product_list_view),
+    url(r'^product/(?P<pk>\d+)/$', product_detail_view),
     url(r'^admin/', admin.site.urls),
 ]
 

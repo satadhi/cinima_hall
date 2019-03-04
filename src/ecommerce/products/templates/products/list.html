@@ -1,3 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
 {% for x in qs %}
 {{ x.title }} <br/>
 {% endfor %}
+{% include '/products/snippets/card.html' %} -->  this thing is not working delete this and everything is fine !
+
+{% endblock %}
