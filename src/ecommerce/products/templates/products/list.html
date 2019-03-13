@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="container">
+  <div class="row">
 {% for x in qs %}
-{{ x.title }} <br/>
-{% endfor %}
-{% include '/products/snippets/card.html' %} -->  this thing is not working delete this and everything is fine !
+    <div class="col">
+      {% include 'products/snippets/card.html' with instance=x %}
+      </div>
 
+{% endfor %}
+</div>
+</div>
 {% endblock %}
