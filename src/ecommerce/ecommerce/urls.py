@@ -16,8 +16,8 @@ Including another URLconf
 
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import url, include
 
-from django.conf.urls import url
 from django.contrib import admin
 
 from products.views import ProductListView, product_list_view, product_detail_view
@@ -31,8 +31,8 @@ urlpatterns = [
     url(r'^login/$', login_page),
     url(r'^register/$', register_page),
     #url(r'^product/$', ProductListView.as_view()),#its a class so you have to make it a callable item
-    url(r'^product/$', product_list_view),
-    url(r'^product/(?P<pk>\d+)/$', product_detail_view),
+     url(r'^product/$', include("products.urls")),
+    # url(r'^product/(?P<pk>\d+)/$', product_detail_view),
     url(r'^admin/', admin.site.urls),
 ]
 
